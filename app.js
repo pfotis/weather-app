@@ -11,6 +11,6 @@ request({ url: url, json: true }, (error, response) => {
 
 
 request({url: geocodeURL, json: true }, (error, response) => {
-    console.log(`latitude: ${response.body.features[0].center[0]}. \nlongtitude: ${response.body.features[0].center[1]} \n`)
+    console.log(`latitude: ${response.body.features[0].center[1]}. \nlongtitude: ${response.body.features[0].center[0]} \n`)
     
 })
