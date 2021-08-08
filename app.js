@@ -4,8 +4,8 @@ const url = 'http://api.weatherstack.com/current?access_key=89906dfb7f555d9f1870
 const geocodeURL ="https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=pk.eyJ1IjoicGZvdGlzIiwiYSI6ImNrczJvc2Q5dDBxaHIyd3J5YXVqMmlhbm8ifQ.iHnpfKTSVHvyu8HG1WiEOQ&limit=1"
 
 request({ url: url, json: true }, (error, response) => {
-    // console.log(response.body.current)
-    console.log(`${response.body.current.weather_descriptions[0]}. It is currently ${response.body.current.temperature} degress out. It feels like ${response.body.current.feelslike} degress out.`)
+    console.log(error)
+    // console.log(`${response.body.current.weather_descriptions[0]}. It is currently ${response.body.current.temperature} degress out. It feels like ${response.body.current.feelslike} degress out.`)
 })
 
 
