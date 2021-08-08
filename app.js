@@ -1,5 +1,6 @@
 const request = require('request')
 const geocode = require('./utils/geocode')
+const forecast = require('./utils/forecast')
 
 // const url = 'http://api.weatherstack.com/current?access_key=89906dfb7f555d9f1870b074e1ec1aba&query=&units=f'
 
