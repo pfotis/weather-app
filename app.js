@@ -2,7 +2,6 @@ const request = require('request')
 const geocode = require('./utils/geocode')
 
 // const url = 'http://api.weatherstack.com/current?access_key=89906dfb7f555d9f1870b074e1ec1aba&query=&units=f'
-// const geocodeURL ="https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=pk.eyJ1IjoicGZvdGlzIiwiYSI6ImNrczJvc2Q5dDBxaHIyd3J5YXVqMmlhbm8ifQ.iHnpfKTSVHvyu8HG1WiEOQ&limit=1"
 
 // request({ url: url, json: true }, (error, response) => {
 //     if(error) {
@@ -15,22 +14,12 @@ const geocode = require('./utils/geocode')
 // })
 
 
-
-// request({url: geocodeURL, json: true }, (error, response) => {
-    
-//     if(error) {
-//         console.log('Unable to connect to location services!')
-//     } else if (response.body.features.length === 0) {
-//         console.log('Unable to find location')
-//     } else {
-//         const latitude = response.body.features[0].center[1]
-//         const longitude = response.body.features[0].center[0]
-//         console.log(latitude, longitude)
-//     }
-    
+// geocode('Boston', (error, data) => {
+//     console.log('Error', error)
+//     console.log('Data' , data)
 // })
 
-geocode('New York', (error, data) => {
+forecast(-75.7088, 44.1545, (error, data) => {
     console.log('Error', error)
-    console.log('Data' , data)
+    console.log('Data', data)
 })
