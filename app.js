@@ -1,4 +1,5 @@
 const request = require('request')
+const geo = require('./utils/geocode.js')
 
 // const url = 'http://api.weatherstack.com/current?access_key=89906dfb7f555d9f1870b074e1ec1aba&query=&units=f'
 // const geocodeURL ="https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=pk.eyJ1IjoicGZvdGlzIiwiYSI6ImNrczJvc2Q5dDBxaHIyd3J5YXVqMmlhbm8ifQ.iHnpfKTSVHvyu8HG1WiEOQ&limit=1"
@@ -29,10 +30,7 @@ const request = require('request')
     
 // })
 
-const geocode = (address, callback) => {
-    const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(address) + '.json?access_token=pk.eyJ1IjoicGZvdGlzIiwiYSI6ImNrczJvc2Q5dDBxaHIyd3J5YXVqMmlhbm8ifQ.iHnpfKTSVHvyu8HG1WiEOQ&limit=1'
-}
-
-geocode('Melbourne', (error, data) => {
-
+geo.geocode('New York', (error, data) => {
+    console.log('Error', error)
+    console.log('Data' , data)
 })
