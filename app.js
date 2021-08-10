@@ -11,11 +11,12 @@ if (!address) {
         if(error) {
             return console.log(error)
         } else {
-            forecast(data.latitude, data.longitude, (error, forecastData) => {
+            const { latitude, longitude, location } = data
+            forecast(latitude, longitude, (error, forecastData) => {
                 if(error) {
                     return console.log(error)
                 } else {
-                    console.log(data.location)
+                    console.log(location)
                     console.log(forecastData)
                 }
             })
